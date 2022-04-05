@@ -69,7 +69,8 @@ export const Ancora = styled.a`
     transition: 0.3s;
 
     &.active{ //** Quando a pagina em questao for da ancora clicada
-        background-color: black;
+        border-bottom: 1px solid white;
+        margin-bottom: 1em;
     }
 
     @media (min-width: 560px){
