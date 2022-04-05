@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Content, Created_at, Li, TitleProject, Ul, Url } from "./style";
+import { Container, Content, Created_at, Li, TitleProject, Ul, Url } from "../../../styles/pageProjects/style";
 
 export default function Projects() {
 
