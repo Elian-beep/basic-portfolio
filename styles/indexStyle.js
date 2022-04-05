@@ -71,6 +71,7 @@ export const LinkProjects = styled.button`
     justify-content: space-around; //**Entre o texto do btn e o icon de seta
     margin-top: 20px;
     font-weight: bold;
+    border-radius: 5px;
 
     svg{
         font-size: 20px;
