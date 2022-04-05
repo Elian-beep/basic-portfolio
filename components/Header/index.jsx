@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Ancora, CloseSidebar, Container, Content, ContentTitle, Menu, NavLinks, SubTitle, Title } from "./style";
 import { FaBars, FaTimes } from 'react-icons/fa';
-import Link from "next/link";
+import Link from "next/link";               //O link permite a navegação entre as rotas
 import { useRouter } from "next/router";
 
 export default function Header() {
