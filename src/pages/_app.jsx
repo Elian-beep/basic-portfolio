@@ -3,6 +3,7 @@
 
 import '../../styles/globals.css';
 import Header from '../../components/Header';       //Componente criado
+import Footer from '../../components/Footer';
 
 import Head from 'next/head';
 
@@ -16,6 +17,8 @@ function MyApp({ Component, pageProps }) {
     <Header />
 
     <Component {...pageProps} /> {/* Componentes que serão renderizados conforme solicitados */}
+
+    <Footer />
     </>
   );
 }
