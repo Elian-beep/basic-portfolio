@@ -7,6 +7,7 @@ export default function Footer() {
     return (
         <Container>
             <Content>
+                
                 <Session>
                     <TextInfo>Desenvolvido por: Elian Batista</TextInfo>
                     <BsWrench></BsWrench>

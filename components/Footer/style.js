@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 //Componente estilizado CONTAINER, que acolherá todos os outroa componentes
 export const Container = styled.div`
-    height: 90px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,6 +22,10 @@ export const Content = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+
+    @media(max-width: 760px){
+        flex-direction: column;
+    }
 `;
 
 //Componente estilizado SOCIAIS-BOX, organizará os icones e textos das redes sociais
@@ -29,6 +33,7 @@ export const SociaisBox = styled.div`
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    margin-bottom: 10px;
 `;
 
 //Componente estilizado SOCIAIS-BTN, Botão que redirecionará para o link da rede social
@@ -52,4 +57,9 @@ export const Mid = styled.div`
 `;
 
 //Componente estilizado SESSION, cada session terá as colunas de informações do rodape
-export const Session = styled.div``;
+export const Session = styled.div`
+    @media(max-width: 760px){
+        flex: 1;
+        margin-top: 20px;
+    }
+`;
