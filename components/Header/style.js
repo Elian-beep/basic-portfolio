@@ -7,7 +7,10 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid white;
-    position-top: fixed;
+    
+    //**Tentando fixar o Header
+    position: fixed;
+    top: 0;
 `;
 
 //Componente estilizado CONTENT, que definirá um limte vertical de espaço para os itens no Header
