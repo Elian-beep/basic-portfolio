@@ -42,12 +42,12 @@ export default function Header() {
                             <Ancora className={activeLink('')} onClick={showSideBar} >Home</Ancora>
                         </Link>
 
-                        <Link href="projects">
-                            <Ancora className={activeLink('projects')} onClick={showSideBar} >Projetos</Ancora>
+                        <Link href="Projetos">
+                            <Ancora className={activeLink('contact')} onClick={showSideBar} >Projetos</Ancora>
                         </Link>
 
-                        <Link href="contact">
-                            <Ancora className={activeLink('contact')} onClick={showSideBar} >Contato</Ancora>
+                        <Link href="projects">
+                            <Ancora className={activeLink('projects')} onClick={showSideBar} >Repositórios</Ancora>
                         </Link>
 
                     </NavLinks>

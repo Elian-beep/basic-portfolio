@@ -1,5 +1,5 @@
 import React from "react";
-import { BsInstagram, BsGithub, BsLinkedin, BsWrench } from "react-icons/bs";
+import { BsInstagram, BsGithub, BsLinkedin, BsWrench, BsFillFolderSymlinkFill } from "react-icons/bs";
 
 import { Container, Content, Mid, Session, SociaisBtn, SociaisBox, TextInfo } from './style';
 

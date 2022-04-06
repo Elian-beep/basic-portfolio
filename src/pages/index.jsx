@@ -11,7 +11,7 @@ export default function Home() {
 
         <Infos>
           <Name>Olá, sou Elian Batista</Name>
-          <Function>FrontEnd Developer</Function>
+          <Function>Desenvolvedor Front End</Function>
           <Intro>Cursando Ciência da Computação, formado como Técnico em Informática, Conhecimento sobre
             as técnologias de desenvolvimento front end (HTML, CSS, JS, Bootstrap e React).
           </Intro>

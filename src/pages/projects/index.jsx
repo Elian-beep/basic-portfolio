@@ -39,7 +39,8 @@ export default function Projects() {
                             <TitleProject> {item.name.toUpperCase()} </TitleProject>
                             <Created_at>Data de Criação: {Intl.DateTimeFormat('pt-BR').format(new Date(item.created_at))} </Created_at>
                             <Description>Descrição: {item.description}</Description>
-                            <LinkUrl href={'https://'+item.homepage}>
+
+                            <LinkUrl href={item.homepage}>
                                 <Url>Acessar HomePage</Url>
                             </LinkUrl>
 
