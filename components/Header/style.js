@@ -9,8 +9,9 @@ export const Container = styled.div`
     border-bottom: 1px solid white;
     
     //**Tentando fixar o Header
+    position: -webkit-sticky; //** Necessário para funcionar no Safari
     position: sticky;
-    z-index: 999;
+    top: 0;
 `;
 
 //Componente estilizado CONTENT, que definirá um limte vertical de espaço para os itens no Header
