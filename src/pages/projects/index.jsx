@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Content, Created_at, Li, TitleProject, Ul, Url } from "../../../styles/pageProjects/style";
+import { Container, Content, Created_at, Li, LinkUrl, TitleProject, Ul, Url } from "../../../styles/pageProjects/style";
 
 export default function Projects() {
 
@@ -37,7 +37,7 @@ export default function Projects() {
                         <Li key={item.id}>
 
                             <TitleProject> {item.name.toUpperCase()} </TitleProject>
-                            <Url>URL: {item.url} </Url>
+                            <LinkUrl href={item.homepage}> <Url>URL: {item.homepage} </Url> </LinkUrl>
                             <Created_at>Data de Criação: { Intl.DateTimeFormat('pt-BR').format(new Date(item.created_at)) } </Created_at>
 
                         </Li>

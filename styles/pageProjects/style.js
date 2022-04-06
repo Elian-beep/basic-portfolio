@@ -60,3 +60,5 @@ export const TitleProject = styled.strong``;
 export const Url = styled.span``;
 
 export const Created_at = styled.span``;
+
+export const LinkUrl = styled.a``;
