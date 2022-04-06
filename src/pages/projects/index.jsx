@@ -10,16 +10,16 @@ export default function Projects() {
 
         function getGitHubAPI() { //Função da requisição de informações da conta no github
             fetch('https://api.github.com/users/Elian-beep/repos')
-            .then(async res => { //Se a reuisição der certo
+                .then(async res => { //Se a reuisição der certo
 
-                if (!res.ok) { //Se não encontrar as informações
-                    throw new Error(res.status); //Armazenar um erro
-                }
+                    if (!res.ok) { //Se não encontrar as informações
+                        throw new Error(res.status); //Armazenar um erro
+                    }
 
-                var data = await res.json(); //Armazenar as informações em um json
-                setItemsApi(data); //Passar para a lista de items retiradas da api
-            })
-            .catch(e => console.log(e)); //Se der erro, exibir o erro no console
+                    var data = await res.json(); //Armazenar as informações em um json
+                    setItemsApi(data); //Passar para a lista de items retiradas da api
+                })
+                .catch(e => console.log(e)); //Se der erro, exibir o erro no console
         }
 
         getGitHubAPI();
@@ -28,7 +28,7 @@ export default function Projects() {
 
     }, []);
 
-    return(
+    return (
         <Container>
             <Content>
                 <Ul>
@@ -37,8 +37,10 @@ export default function Projects() {
                         <Li key={item.id}>
 
                             <TitleProject> {item.name.toUpperCase()} </TitleProject>
-                            <LinkUrl href={item.homepage}> <Url>URL: {item.homepage} </Url> </LinkUrl>
-                            <Created_at>Data de Criação: { Intl.DateTimeFormat('pt-BR').format(new Date(item.created_at)) } </Created_at>
+                            <Created_at>Data de Criação: {Intl.DateTimeFormat('pt-BR').format(new Date(item.created_at))} </Created_at>
+                            <LinkUrl href={'https://'+item.homepage}>
+                                <Url>Acessar HomePage</Url>
+                            </LinkUrl>
 
                         </Li>
                     ))}
