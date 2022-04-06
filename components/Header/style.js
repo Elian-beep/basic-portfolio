@@ -9,7 +9,7 @@ export const Container = styled.div`
     border-bottom: 1px solid white;
     
     //**Tentando fixar o Header
-    position: fixed;
+    position: sticky;
     z-index: 999;
 `;
 
