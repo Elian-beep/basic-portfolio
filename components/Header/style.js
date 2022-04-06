@@ -16,6 +16,7 @@ export const Content = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    position-top: fixed;
 `;
 
 //Componente estilizado CONTENT-TITLE, Area que controla todos os titulos e subtitulos agrupados no Header
