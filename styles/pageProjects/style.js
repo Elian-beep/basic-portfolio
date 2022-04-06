@@ -64,12 +64,10 @@ export const Description = styled.p`
     font-size: 15px;
 `;
 
-export const Url = styled.span``;
-
 export const LinkUrl = styled.a`
     padding: 0.5em 0.5em;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     outline: none;
     text-decoration: none;
     text-transform: uppercase;
@@ -81,4 +79,15 @@ export const LinkUrl = styled.a`
     text-align: center;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #000;
+
+    flex: 1;
+`;
+
+export const LinksGroup = styled.div`
+    display: flex;
+    gap: 30px;
+`;
+
+export const Url = styled.span`
+    letter-spacing: 4px;
 `;
