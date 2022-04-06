@@ -59,6 +59,11 @@ export const TitleProject = styled.strong``;
 
 export const Created_at = styled.span``;
 
+export const Description = styled.p`
+    color: gray;
+    font-size: 15px;
+`;
+
 export const Url = styled.span``;
 
 export const LinkUrl = styled.a`
