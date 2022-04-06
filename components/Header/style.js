@@ -7,6 +7,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid white;
+    background-color: #121214;
     
     //**Tentando fixar o Header
     position: -webkit-sticky; //** Necessário para funcionar no Safari
