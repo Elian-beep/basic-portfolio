@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Content, Created_at, Description, Li, LinksGroup, LinkUrl, TitleProject, Ul, Url } from "../../../styles/pageProjects/style";
+import { Container, Content, Created_at, Description, Li, LinksGroup, LinkUrl, Path, Script, Svg, TitleProject, Ul, Url } from "../../../styles/pageProjects/style";
 
 export default function Projects() {
 
@@ -55,8 +55,10 @@ export default function Projects() {
 
                 </Ul>
 
-                {itemsApi.length<=0 &&
-                    <img src="/images/loading.gif" alt="carregando" />
+                {itemsApi.length <= 0 &&
+                    <div>
+                        <img src="/images/loading.svg" alt="" />
+                    </div>
                 }
 
             </Content>

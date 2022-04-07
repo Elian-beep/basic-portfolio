@@ -8,19 +8,19 @@ import Footer from '../../components/Footer';
 import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
-  return(
+  return (
     <>
-    <Head>
-      <link rel="icon" href="/images/Avatar-Elian.png" />
+      <Head>
+        <link rel="icon" href="/images/Avatar-Elian.png" />
 
-      <title>Elian | dev</title> {/* Assim todas as páginas terão o mesmo titulo */}
-    </Head>
+        <title>Elian | dev</title> {/* Assim todas as páginas terão o mesmo titulo */}
+      </Head>
 
-    <Header />
+      <Header />
 
-    <Component {...pageProps} /> {/* Componentes que serão renderizados conforme solicitados */}
+      <Component {...pageProps} /> {/* Componentes que serão renderizados conforme solicitados */}
 
-    <Footer />
+      <Footer />
     </>
   );
 }
