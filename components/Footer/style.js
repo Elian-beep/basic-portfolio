@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 //Componente estilizado CONTAINER, que acolherá todos os outroa componentes
 export const Container = styled.div`
-    height: 100px;
+    height: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
