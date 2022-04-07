@@ -54,6 +54,11 @@ export default function Projects() {
                     ))}
 
                 </Ul>
+
+                {itemsApi.length<=0 &&
+                    <img src="/images/loading.gif" alt="carregando" />
+                }
+
             </Content>
         </Container>
     );
