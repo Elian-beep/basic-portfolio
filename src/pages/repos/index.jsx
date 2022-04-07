@@ -32,7 +32,6 @@ export default function Projects() {
         <Container>
             <Content>
                 <Ul>
-
                     {itemsApi.map(item => ( //O 'item' vai mapear cada elemento do json que contem as iformações dos repositorios
                         <Li key={item.id}>
 
@@ -51,13 +50,12 @@ export default function Projects() {
                             </LinksGroup>
 
                         </Li>
-                    ))}
-
+                    ))} 
                 </Ul>
 
-                {itemsApi.length <= 0 &&
+                {itemsApi.length <= 0 && //Caso a api ainda nao encontre nenhum resultado dos repositorios
                     <div>
-                        <img src="/images/loading.svg" alt="" />
+                        <img src="/images/loading.svg" alt="loading..." />
                     </div>
                 }
 
