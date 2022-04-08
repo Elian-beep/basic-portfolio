@@ -8,6 +8,7 @@ export const Container = styled.div`
     justify-content: center;
     border-bottom: 1px solid white;
     background-color: #121214;
+    z-index: 999; //**Para sobrepor qualquer outro elemento
     
     //**Tentando fixar o Header
     position: -webkit-sticky; //** Necessário para funcionar no Safari
