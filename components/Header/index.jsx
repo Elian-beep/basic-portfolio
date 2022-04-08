@@ -43,11 +43,11 @@ export default function Header() {
                         </Link>
 
                         <Link href="projects">
-                            <Ancora className={activeLink('contact')} onClick={showSideBar} >Projetos</Ancora>
+                            <Ancora className={activeLink('projects')} onClick={showSideBar} >Projetos</Ancora>
                         </Link>
 
                         <Link href="repos">
-                            <Ancora className={activeLink('projects')} onClick={showSideBar} >Repositórios</Ancora>
+                            <Ancora className={activeLink('repos')} onClick={showSideBar} >Repositórios</Ancora>
                         </Link>
 
                     </NavLinks>

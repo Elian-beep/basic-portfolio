@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Container, Content, Created_at, Description, Li, LinksGroup, LinkUrl, Path, Script, Svg, TitleProject, Ul, Url } from "../../../styles/pageProjects/style";
+import { Container, Content, Created_at, Description, Li, LinksGroup, LinkUrl, Path, Script, Svg, TitleProject, Ul, Url } from "../../../styles/pageRepos/style";
 
-export default function Projects() {
+export default function Repos() {
 
     const [itemsApi, setItemsApi] = useState([]); //Os valores de itemsApi iniciaram array vazio, mas pode mudar sua renderização dependendo do set
 
