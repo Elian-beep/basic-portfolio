@@ -14,7 +14,7 @@ export default function Projects() {
                         </TopCard>
 
                         <MediaCard>
-                            <img src="/images/capa_exemplo.png" alt="capa_projeto" />
+                            <img src="/images/capa_projeto.jpg" alt="capa_projeto" />
                         </MediaCard>
 
                         <BottomCard>
@@ -35,7 +35,7 @@ export default function Projects() {
                         </TopCard>
 
                         <MediaCard>
-                            <img src="/images/capa_exemplo.png" alt="capa_projeto" />
+                            <img src="/images/capa_projeto.jpg" alt="capa_projeto" />
                         </MediaCard>
 
                         <BottomCard>
@@ -56,7 +56,7 @@ export default function Projects() {
                         </TopCard>
 
                         <MediaCard>
-                            <img src="/images/capa_exemplo.png" alt="capa_projeto" />
+                            <img src="/images/capa_projeto.jpg" alt="capa_projeto" />
                         </MediaCard>
 
                         <BottomCard>
@@ -77,7 +77,7 @@ export default function Projects() {
                         </TopCard>
 
                         <MediaCard>
-                            <img src="/images/capa_exemplo.png" alt="capa_projeto" />
+                            <img src="/images/capa_projeto.jpg" alt="capa_projeto" />
                         </MediaCard>
 
                         <BottomCard>

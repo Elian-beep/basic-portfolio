@@ -26,7 +26,6 @@ export const Content = styled.div`
 export const AreaExposition = styled.div`
     overflow-x: auto; //**Automatizando o tamanho das informações do repositorio dentro da caixa individual
     height: inherit;
-    gap: 20px;
 
     &::-webkit-scrollbar{ //**Barra geral de fundo do scroolbar
         width: 5px;
@@ -44,14 +43,19 @@ export const AreaExposition = styled.div`
 
 //Componente estilizado AREA-EXPOSITION, Area de exibição dos cards
 export const Card = styled.div`
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    word-break: break-word; //**A quebra de linha será feita respeitando o limite da caixa
+
     background: #fff;
     border-radius: 10px;
     box-shadow: 0px 2px 23px #26395338;
     width: 500px;
-    margin: 20px 10px;
+    margin: 10px 10px;
 
     @media(max-width: 600px){
-        width: 400px;
+        width: 370px;
     }
 `;
 
@@ -63,6 +67,7 @@ export const TopCard = styled.div`
 
 //Componente estilizado AREA-EXPOSITION, Area de exibição dos cards
 export const Title = styled.h2`
+    margin-top: 1em;
     color: #2b3d59;
 `;
 
@@ -74,7 +79,7 @@ export const SecondText = styled.span`
 //Componente estilizado AREA-EXPOSITION, Area de exibição dos cards
 export const MediaCard = styled.div`
     img{
-        height: 350px;
+        height: 300px;
         width: 100%;
     }
 `;
@@ -91,11 +96,17 @@ export const BottomText = styled.p`
 
 //Componente estilizado AREA-EXPOSITION, Area de exibição dos cards
 export const ActionsCard = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5em;
 `;
 
 //Componente estilizado AREA-EXPOSITION, Area de exibição dos cards
 export const Actions = styled.button`
     background: none;
     border: none;
-    color: purple;
+    color: #2b3d59;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #2b3d59; 
 `;

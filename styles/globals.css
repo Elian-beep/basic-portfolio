@@ -13,6 +13,18 @@ body {
   text-align: -webkit-center;
 }
 
-a, button {
+body::-webkit-scrollbar {
+  border-radius: 5px;
+  width: 10px;
+  background-color: #1C1C1C;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+a,
+button {
   cursor: pointer;
 }
