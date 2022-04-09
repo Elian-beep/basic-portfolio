@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 //Componente estilizado CONTAINER, que acolherá todos os outroa componentes
 export const Container = styled.div`
+    margin-top: 1em;
     height: 130px;
     display: flex;
     align-items: center;

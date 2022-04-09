@@ -28,14 +28,14 @@ export const Ul = styled.ul`
     height: inherit;
 
     &::-webkit-scrollbar{ //**Barra geral de fundo do scroolbar
-        width: 12px;
+        width: 5px;
         border-radius: 10px;
-        background-color: whitesmoke;
+        background-color: #1C1C1C;
     }
 
     &::-webkit-scrollbar-thumb{
         border-radius: 10px;
-        background-color: darkgray;
+        background-color: #363636;
     }
 `;
 
