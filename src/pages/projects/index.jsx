@@ -46,8 +46,8 @@ export default function Projects() {
                             <BottomCard>
                                 <BottomText>{item.description}</BottomText>
                                 <ActionsCard>
-                                    <Actions>Visitar Página</Actions>
-                                    <Actions>Ver no Github</Actions>
+                                    <Actions href={item.homepage} >Visitar Página</Actions>
+                                    <Actions href={item.html_url}>Ver no Github</Actions>
                                 </ActionsCard>
                             </BottomCard>
                         </Card>

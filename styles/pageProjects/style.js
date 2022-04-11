@@ -102,7 +102,8 @@ export const ActionsCard = styled.div`
 `;
 
 //Componente estilizado AREA-EXPOSITION, Area de exibição dos cards
-export const Actions = styled.button`
+export const Actions = styled.a`
+    text-decoration: none;
     background: none;
     border: none;
     color: #2b3d59;
