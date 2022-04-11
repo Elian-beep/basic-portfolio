@@ -4,6 +4,7 @@ import { Actions, ActionsCard, AreaExposition, BottomCard, BottomText, Card, Con
 export default function Projects() {
 
     const [itemsApi, setItemsApi] = useState([]);
+    let capa = '';
 
     useEffect(() => {
         let abortController = new AbortController();
@@ -31,6 +32,7 @@ export default function Projects() {
             <Content>
                 <AreaExposition>
                     {itemsApi.map(item => (
+                        capa = "https://raw.githubusercontent.com/Elian-beep/" + item.name + "/main/capa/capa.png",
                         <Card key={item.id}>
                             <TopCard>
                                 <Title>{item.name.toUpperCase()}</Title>
@@ -38,7 +40,7 @@ export default function Projects() {
                             </TopCard>
 
                             <MediaCard>
-                                <img src={"https://raw.githubusercontent.com/Elian-beep/"+ item.name+ "/main/capa/capa.png"} alt="capa_projeto" />
+                                <img src={capa} alt="capa_projeto" loading='lazy' />
                             </MediaCard>
 
                             <BottomCard>
@@ -52,6 +54,11 @@ export default function Projects() {
                     ))}
 
                 </AreaExposition>
+                {itemsApi.length <= 0 &&
+                    <div>
+                        <img src="/images/loading.svg" alt="loading..." />
+                    </div>
+                }
             </Content>
         </Container>
     );
