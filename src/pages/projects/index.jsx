@@ -36,7 +36,7 @@ export default function Projects() {
                         <Card key={item.id}>
                             <TopCard>
                                 <Title>{item.name.toUpperCase()}</Title>
-                                <SecondText>Exemplo de texto secundário</SecondText>
+                                <SecondText>Data de Criação: {Intl.DateTimeFormat('pt-BR').format(new Date(item.created_at))}</SecondText>
                             </TopCard>
 
                             <MediaCard>
