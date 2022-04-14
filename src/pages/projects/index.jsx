@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Actions, ActionsCard, AreaExposition, BottomCard, BottomText, Card, Container, Content, MediaCard, SecondText, Title, TopCard } from '../../../styles/pageProjects/style';
+import { Actions, ActionsCard, AreaExposition, BottomCard, BottomText, Card, Container, Content, MediaCard, Script, SecondText, Title, TopCard } from '../../../styles/pageProjects/style';
 
 export default function Projects() {
 
@@ -27,31 +27,52 @@ export default function Projects() {
         return () => abortController.abort();
     }, []);
 
+    function checkOnline(url, error, ok) {
+        try {
+            var scriptElem = document.createElement('script');
+            scriptElem.type = 'text/javascript';
+            scriptElem.onerror = function(){error();};
+            scriptElem.onload = function(){ok();};
+            scriptElem.src = url;
+            document.getElementsByTagName("body")[0].appendChild(scriptElem);
+        } catch(err) {
+            error(err);
+        }
+    };
+
+    itemsApi.map(item => (
+        console.log(item.name)
+    ))
+
     return (
         <Container>
             <Content>
                 <AreaExposition>
-                    {itemsApi.map(item => (
-                        capa = "https://raw.githubusercontent.com/Elian-beep/" + item.name + "/main/capa/capa.png",
-                        <Card key={item.id}>
-                            <TopCard>
-                                <Title>{item.name.toUpperCase()}</Title>
-                                <SecondText>Data de Criação: {Intl.DateTimeFormat('pt-BR').format(new Date(item.created_at))}</SecondText>
-                            </TopCard>
 
-                            <MediaCard>
-                                <img src={capa} alt="capa_projeto" loading='lazy' />
-                            </MediaCard>
+                    {
+                        itemsApi.map(item => (
+                            capa = "https://raw.githubusercontent.com/Elian-beep/" + item.name + "/main/capa/capa.png",
+                            <Card key={item.id}>
+                                <TopCard>
+                                    <Title>{item.name.toUpperCase()}</Title>
+                                    <SecondText>Data de Criação: {Intl.DateTimeFormat('pt-BR').format(new Date(item.created_at))}</SecondText>
+                                </TopCard>
 
-                            <BottomCard>
-                                <BottomText>{item.description}</BottomText>
-                                <ActionsCard>
-                                    <Actions href={item.homepage} >Visitar Página</Actions>
-                                    <Actions href={item.html_url}>Ver no Github</Actions>
-                                </ActionsCard>
-                            </BottomCard>
-                        </Card>
-                    ))}
+                                <MediaCard>
+                                    <img src={capa} alt="capa_projeto" loading='lazy' />
+                                </MediaCard>
+
+                                <BottomCard>
+                                    <BottomText>{item.description}</BottomText>
+                                    <ActionsCard>
+
+                                        <Actions href={item.homepage} >Visitar Página</Actions>
+                                        <Actions href={item.html_url}>Ver no Github</Actions>
+                                    </ActionsCard>
+                                </BottomCard>
+                            </Card>
+                        ))
+                    }
 
                 </AreaExposition>
                 {itemsApi.length <= 0 &&

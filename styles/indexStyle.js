@@ -32,8 +32,12 @@ export const Infos = styled.div`
     width: 50%; //**Vai ocupar a primeira metade da tela
     display: grid; //**Seus elementos estarão organizados entre os blocos de colunas e linhas grid
 
-    @media(mas-width: 760px){ //**Se for menor que 760px
+    @media(max-width: 760px){ //**Se for menor que 760px
         font-size: 25px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
 `;
 
@@ -60,6 +64,7 @@ export const Intro = styled.span`
 
     @media(max-width: 760px){
         font-size: 15px;
+        width: 100%;
     }
 `; 
 
@@ -80,7 +85,7 @@ export const LinkProjects = styled.button`
 
 //Componente estilizado LOGO, imagem do avatar
 export const Logo = styled.div`
-    width: 50% //**Vai ocupar a segunda metade da tela
+    width: 50%; //**Vai ocupar a segunda metade da tela
     display: flex;
     align-items: center;
     justify-content: center;

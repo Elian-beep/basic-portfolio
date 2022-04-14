@@ -111,3 +111,5 @@ export const Actions = styled.a`
     border-radius: 5px;
     border: 1px solid #2b3d59; 
 `;
+
+export const Script = styled.script``;

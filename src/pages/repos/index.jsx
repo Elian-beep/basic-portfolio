@@ -40,6 +40,7 @@ export default function Repos() {
                             <Description>Descrição: {item.description}</Description>
 
                             <LinksGroup>
+
                                 <LinkUrl href={item.homepage}>
                                     <Url>Acessar HomePage</Url>
                                 </LinkUrl>
@@ -50,7 +51,7 @@ export default function Repos() {
                             </LinksGroup>
 
                         </Li>
-                    ))} 
+                    ))}
                 </Ul>
 
                 {itemsApi.length <= 0 && //Caso a api ainda nao encontre nenhum resultado dos repositorios

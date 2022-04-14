@@ -91,7 +91,7 @@ export const Ancora = styled.a`
 export const Menu = styled.div`
     font-size: 30px;
     display: none;
-    cursor; pointer;
+    cursor: pointer;
 
     @media (max-width: 560px){
         display: flex;
@@ -109,6 +109,5 @@ export const CloseSidebar = styled.div`
 
     @media (max-width: 560px){
         display: flex;
-    }
     }
 `;

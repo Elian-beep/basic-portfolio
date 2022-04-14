@@ -12,6 +12,7 @@ export default function Home() {
         <Infos>
           <Name>Olá, sou Elian Batista</Name>
           <Function>Desenvolvedor Front End</Function>
+
           <Intro>Cursando Ciência da Computação, formado como Técnico em Informática, Conhecimento sobre
             as técnologias de desenvolvimento front end (HTML, CSS, JS, Bootstrap e React).
           </Intro>
@@ -23,6 +24,8 @@ export default function Home() {
 
         <Logo>
           <Img src='/images/Avatar-Elian.svg' />
+          
+          
         </Logo>
 
       </Content>

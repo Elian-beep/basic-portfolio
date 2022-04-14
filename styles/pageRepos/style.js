@@ -74,8 +74,8 @@ export const LinkUrl = styled.a`
     box-sizing: border-box;
     font-weight: 800;
     letter-spacing: 1px;
-    color: gray;
-    background: black;
+    color: white;
+    background: gray;
     text-align: center;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #000;

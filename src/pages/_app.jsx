@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+
         <link rel="icon" href="/images/Avatar-Elian.png" />
 
         <title>Elian | dev</title> {/* Assim todas as páginas terão o mesmo titulo */}
