@@ -2,41 +2,60 @@ import styled from 'styled-components';
 
 //Componente estilizado CONTAINER, que acolherá todos os outroa componentes
 export const Container = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 100px); //**Irá ocupar 100vh da tela ignorando os 100px do header
+    @media (max-width: 600px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - 100px); //**Irá ocupar 100vh da tela ignorando os 100px do header
+    }
 `;
 
 //Componente estilizado CONTENT, que controlará os elementos específicos dentro do CONTAINER
 export const Content = styled.div`
-    width: 1120px;
-    height: 100%;
+
     justify-content: center;
     display: flex;
     align-items: center;
-    padding: 20px;
-
+    
     @media(max-width: 600px){ //**Se for menor que 600px
         padding: 5px;
+        width: 1120px;
+        height: 100%;
+        
     }
 `;
 
 //Componente estilizado AREA-EXPOSITION, Area de exibição dos cards
 export const AreaExposition = styled.div`
-    overflow-x: auto; //**Automatizando o tamanho das informações do repositorio dentro da caixa individual
-    height: inherit;
+    margin: 20px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 600px 600px;
+    place-items: center;
 
-    &::-webkit-scrollbar{ //**Barra geral de fundo do scroolbar
+    
+
+    @media (max-width: 600px) {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+
+        overflow-x: auto; //**Automatizando o tamanho das informações do repositorio dentro da caixa individual
+        height: inherit;
+
+        &::-webkit-scrollbar{ //**Barra geral de fundo do scroolbar
         width: 5px;
         border-radius: 10px;
         background-color: #1C1C1C;
+        }
+
+        &::-webkit-scrollbar-thumb{
+            border-radius: 10px;
+            background-color: #363636;
+        }
     }
 
-    &::-webkit-scrollbar-thumb{
-        border-radius: 10px;
-        background-color: #363636;
-    }
+    
 `;
 
 //AREA DA ESTILIZAÇÃO DO CARD
@@ -53,6 +72,8 @@ export const Card = styled.div`
     box-shadow: 0px 2px 23px #26395338;
     width: 500px;
     margin: 10px 10px;
+
+    height: 85vh;
 
     @media(max-width: 600px){
         width: 370px;

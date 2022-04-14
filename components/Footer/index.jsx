@@ -27,7 +27,7 @@ export default function Footer() {
                             </SociaisBtn>
                         </Mid>
 
-                        <SociaisBtn href="linkedin.com/in/elian-batista-2b5865237 ">
+                        <SociaisBtn href="https://linkedin.com/in/elian-batista-2b5865237 ">
                             <TextInfo>Elian <BsLinkedin></BsLinkedin></TextInfo>
                         </SociaisBtn>
 
