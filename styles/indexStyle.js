@@ -11,11 +11,10 @@ export const Container = styled.div`
 //Componente estilizado CONTENT, que controlará os elementos específicos dentro do CONTAINER
 export const Content = styled.div`
     width: 1120px;
-    height: 100%;
+    height: 95%;
     justify-content: space-around;
     display: flex;
     align-items: center;
-    padding: 20px;
 
     @media (max-width: 600px){ //**Se for menor que 600px
         padding: -20px;
@@ -38,6 +37,33 @@ export const Infos = styled.div`
         display: flex;
         flex-direction: column;
         text-align: center;
+    }
+`;
+
+//Componente estilizado LOGO, imagem do avatar
+export const Logo = styled.div`
+    width: 50%; //**Vai ocupar a segunda metade da tela
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        width: 25em;
+        height: 25em;
+    }
+
+    @media(max-width: 760px){ //**Se for menor que 760px
+        width: 90%; //**Vai ocupar maior parte da primeira parte da tela
+        margin: -20px 0;
+    }
+
+    @media(max-width: 600px){ //**Se for menor que 600px
+
+        img{ //**Diminuir o tamnho da imagem
+            width: 18rem;
+            height: 18rem;
+        }
+
     }
 `;
 
@@ -83,31 +109,6 @@ export const LinkProjects = styled.button`
     }
 `; 
 
-//Componente estilizado LOGO, imagem do avatar
-export const Logo = styled.div`
-    width: 50%; //**Vai ocupar a segunda metade da tela
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    img{
-        width: 25em;
-        height: 25em;
-    }
-
-    @media(max-width: 760px){ //**Se for menor que 760px
-        width: 90%; //**Vai ocupar maior parte da primeira parte da tela
-        margin: -100px;
-    }
-
-    @media(max-width: 600px){ //**Se for menor que 600px
-
-        img{ //**Diminuir o tamnho da imagem
-            width: 18rem;
-            height: 18rem;
-        }
-
-    }
-`; 
+ 
 
 export const Img = styled.img``;
