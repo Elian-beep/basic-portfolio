@@ -18,7 +18,7 @@ export const Content = styled.div`
     padding: 20px;
 
     @media (max-width: 600px){ //**Se for menor que 600px
-        padding: 5px;
+        padding: -20px;
     }
 
     @media (max-width: 760px){ //**Se for menor que 760px
@@ -97,6 +97,7 @@ export const Logo = styled.div`
 
     @media(max-width: 760px){ //**Se for menor que 760px
         width: 90%; //**Vai ocupar maior parte da primeira parte da tela
+        margin: -100px;
     }
 
     @media(max-width: 600px){ //**Se for menor que 600px
