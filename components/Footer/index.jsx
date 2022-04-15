@@ -17,18 +17,18 @@ export default function Footer() {
 
                     <SociaisBox>
 
-                        <SociaisBtn href="https://www.instagram.com/e_lianb/">
+                        <SociaisBtn href="https://www.instagram.com/e_lianb/" target='_blank'>
                             <TextInfo>@e_lianb <BsInstagram></BsInstagram></TextInfo>
                         </SociaisBtn>
 
                         <Mid>
-                            <SociaisBtn href="https://github.com/Elian-beep">
+                            <SociaisBtn href="https://github.com/Elian-beep" target='_blank'>
                                 <TextInfo>Elian-beep <BsGithub></BsGithub></TextInfo>
                             </SociaisBtn>
                         </Mid>
 
-                        <SociaisBtn href="https://linkedin.com/in/elian-batista-2b5865237 ">
-                            <TextInfo>Elian <BsLinkedin></BsLinkedin></TextInfo>
+                        <SociaisBtn href="https://linkedin.com/in/elian-batista-2b5865237" target='_blank'>
+                            <TextInfo>Elian B. <BsLinkedin></BsLinkedin></TextInfo>
                         </SociaisBtn>
 
                     </SociaisBox>
