@@ -40,9 +40,7 @@ export default function Projects() {
         }
     };
 
-    itemsApi.map(item => (
-        console.log(item.name)
-    ))
+
 
     return (
         <>
@@ -83,6 +81,12 @@ export default function Projects() {
                 {itemsApi.length <= 0 &&
                     <div>
                         <img src="/images/loading.svg" alt="loading..." />
+                    </div>
+                }
+                {
+                    itemsApi.length>0 && 
+                    <div>
+
                     </div>
                 }
             </Loading>
