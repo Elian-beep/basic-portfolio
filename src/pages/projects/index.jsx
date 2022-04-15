@@ -61,11 +61,12 @@ export default function Projects() {
 
                                     <BottomCard>
                                         <BottomText>{item.description}</BottomText>
-                                        <ActionsCard>
 
+                                        <ActionsCard>
                                             <Actions href={item.homepage} target='_blank' >Visitar Página</Actions>
                                             <Actions href={item.html_url} target='_blank'>Ver no Github</Actions>
                                         </ActionsCard>
+
                                     </BottomCard>
                                 </Card>
                             ))
@@ -75,13 +76,12 @@ export default function Projects() {
                 </Content>
 
             </Container>
-            <Loading>
-                {itemsApi.length <= 0 &&
-                    <div>
-                        <img src="/images/loading.svg" alt="loading..." />
-                    </div>
-                }
-            </Loading>
+
+            {itemsApi.length <= 0 &&
+                <div>
+                    <img src="/images/loading.svg" alt="loading..." />
+                </div>
+            }
         </>
 
     );

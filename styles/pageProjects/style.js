@@ -79,8 +79,8 @@ export const Card = styled.div`
     box-shadow: 0px 2px 23px #26395338;
     width: 500px;
     margin: 10px 10px;
-
-    height: 85vh;
+    height: 550px;
+    padding: 0;
 
     @media(max-width: 600px){
         width: 370px;
