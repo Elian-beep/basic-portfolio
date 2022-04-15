@@ -46,7 +46,7 @@ export default function Repos() {
                                 </LinkUrl>
 
                                 <LinkUrl href={item.html_url} target='_blank'>
-                                    <Url>Ver no GitHub</Url>
+                                    <Url>Acessar GitHub</Url>
                                 </LinkUrl>
                             </LinksGroup>
 

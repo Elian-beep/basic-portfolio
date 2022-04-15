@@ -24,13 +24,7 @@ export const Content = styled.div`
     }
 `;
 
-export const Loading = styled.div`
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 100px); //**Irá ocupar 100vh da tela ignorando os 100px do header
 
-    display: ${props => props.loading ? 'flex' : 'none'};
-`;
 
 //Componente estilizado AREA-EXPOSITION, Area de exibição dos cards
 export const AreaExposition = styled.div`
@@ -139,6 +133,7 @@ export const Actions = styled.a`
     padding: 4px;
     border-radius: 5px;
     border: 1px solid #2b3d59; 
+
 `;
 
 export const Script = styled.script``;

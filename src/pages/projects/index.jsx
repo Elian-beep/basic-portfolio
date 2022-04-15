@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Actions, ActionsCard, AreaExposition, BottomCard, BottomText, Card, Container, Content, Loading, MediaCard, Script, SecondText, Title, TopCard } from '../../../styles/pageProjects/style';
+import { Actions, ActionsCard, AreaExposition, BottomCard, BottomText, Card, Container, Content, MediaCard, Script, SecondText, Title, TopCard } from '../../../styles/pageProjects/style';
+import Loading from '../../../components/Loading';
 
 export default function Projects() {
 
@@ -73,15 +74,11 @@ export default function Projects() {
                         }
 
                     </AreaExposition>
+                    {itemsApi.length <=0 &&
+                        <Loading></Loading>
+                    }
                 </Content>
-
             </Container>
-
-            {itemsApi.length <= 0 &&
-                <div>
-                    <img src="/images/loading.svg" alt="loading..." />
-                </div>
-            }
         </>
 
     );
