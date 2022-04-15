@@ -74,10 +74,10 @@ export default function Projects() {
                         }
 
                     </AreaExposition>
-                    {itemsApi.length <=0 &&
-                        <Loading></Loading>
-                    }
                 </Content>
+                {itemsApi.length <= 0 &&
+                    <Loading></Loading>
+                }
             </Container>
         </>
 
