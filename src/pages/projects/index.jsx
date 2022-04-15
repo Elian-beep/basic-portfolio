@@ -40,8 +40,6 @@ export default function Projects() {
         }
     };
 
-
-
     return (
         <>
             <Container>
@@ -81,12 +79,6 @@ export default function Projects() {
                 {itemsApi.length <= 0 &&
                     <div>
                         <img src="/images/loading.svg" alt="loading..." />
-                    </div>
-                }
-                {
-                    itemsApi.length>0 && 
-                    <div>
-
                     </div>
                 }
             </Loading>
