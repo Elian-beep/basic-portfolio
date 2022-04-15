@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Actions, ActionsCard, AreaExposition, BottomCard, BottomText, Card, Container, Content, MediaCard, Script, SecondText, Title, TopCard } from '../../../styles/pageProjects/style';
+import { Actions, ActionsCard, AreaExposition, BottomCard, BottomText, Card, Container, Content, Loading, MediaCard, Script, SecondText, Title, TopCard } from '../../../styles/pageProjects/style';
 
 export default function Projects() {
 
@@ -31,11 +31,11 @@ export default function Projects() {
         try {
             var scriptElem = document.createElement('script');
             scriptElem.type = 'text/javascript';
-            scriptElem.onerror = function(){error();};
-            scriptElem.onload = function(){ok();};
+            scriptElem.onerror = function () { error(); };
+            scriptElem.onload = function () { ok(); };
             scriptElem.src = url;
             document.getElementsByTagName("body")[0].appendChild(scriptElem);
-        } catch(err) {
+        } catch (err) {
             error(err);
         }
     };
@@ -45,42 +45,48 @@ export default function Projects() {
     ))
 
     return (
-        <Container>
-            <Content>
-                <AreaExposition>
+        <>
+            <Container>
+                <Content>
+                    <AreaExposition>
 
-                    {
-                        itemsApi.map(item => (
-                            capa = "https://raw.githubusercontent.com/Elian-beep/" + item.name + "/main/capa/capa.png",
-                            <Card key={item.id}>
-                                <TopCard>
-                                    <Title>{item.name.toUpperCase()}</Title>
-                                    <SecondText>Data de Criação: {Intl.DateTimeFormat('pt-BR').format(new Date(item.created_at))}</SecondText>
-                                </TopCard>
+                        {
+                            itemsApi.map(item => (
+                                capa = "https://raw.githubusercontent.com/Elian-beep/" + item.name + "/main/capa/capa.png",
+                                <Card key={item.id}>
+                                    <TopCard>
+                                        <Title>{item.name.toUpperCase()}</Title>
+                                        <SecondText>Data de Criação: {Intl.DateTimeFormat('pt-BR').format(new Date(item.created_at))}</SecondText>
+                                    </TopCard>
 
-                                <MediaCard>
-                                    <img src={capa} alt="capa_projeto" loading='lazy' />
-                                </MediaCard>
+                                    <MediaCard>
+                                        <img src={capa} alt="capa_projeto" loading='lazy' />
+                                    </MediaCard>
 
-                                <BottomCard>
-                                    <BottomText>{item.description}</BottomText>
-                                    <ActionsCard>
+                                    <BottomCard>
+                                        <BottomText>{item.description}</BottomText>
+                                        <ActionsCard>
 
-                                        <Actions href={item.homepage} >Visitar Página</Actions>
-                                        <Actions href={item.html_url}>Ver no Github</Actions>
-                                    </ActionsCard>
-                                </BottomCard>
-                            </Card>
-                        ))
-                    }
+                                            <Actions href={item.homepage} >Visitar Página</Actions>
+                                            <Actions href={item.html_url}>Ver no Github</Actions>
+                                        </ActionsCard>
+                                    </BottomCard>
+                                </Card>
+                            ))
+                        }
 
-                </AreaExposition>
+                    </AreaExposition>
+                </Content>
+
+            </Container>
+            <Loading>
                 {itemsApi.length <= 0 &&
                     <div>
                         <img src="/images/loading.svg" alt="loading..." />
                     </div>
                 }
-            </Content>
-        </Container>
+            </Loading>
+        </>
+
     );
 }
