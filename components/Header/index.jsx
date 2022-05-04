@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Ancora, CloseSidebar, Container, Content, ContentTitle, Menu, NavLinks, SubTitle, Title } from "./style";
+import { Ancora, AreaSwitchTheme, CloseSidebar, Container, Content, ContentTitle, InputCheckBox, Menu, NavLinks, SubTitle, Title, ToggleBar } from "./style";
 import { FaBars, FaTimes, FaArrowCircleRight } from 'react-icons/fa';
 import Link from "next/link";               //O link permite a navegação entre as rotas
 import { useRouter } from "next/router";
@@ -38,6 +38,11 @@ export default function Header() {
                     <NavLinks sidebar={sidebar}> {/* Passando o valor do sidebar para a condição de estilização do componente, que deicide se exibe ou não */}
                         <CloseSidebar onClick={showSideBar}> <FaTimes></FaTimes> </CloseSidebar>
 
+                        <AreaSwitchTheme>
+                            <InputCheckBox type="checkbox" id="toggle" />
+                            <ToggleBar for="toggle" className="button" />
+                        </AreaSwitchTheme>
+
                         <Link href="/">
                             <Ancora className={activeLink('')} onClick={showSideBar} >Home</Ancora>
                         </Link>
@@ -50,11 +55,16 @@ export default function Header() {
                             <Ancora className={activeLink('repos')} onClick={showSideBar} >Repositórios</Ancora>
                         </Link> */}
 
-                            <Ancora href="https://prot-web-curriculo.vercel.app/" target='_blank' >Web Currículo <FaArrowCircleRight /></Ancora>
+                        <Ancora href="https://prot-web-curriculo.vercel.app/" target='_blank' >Web Currículo <FaArrowCircleRight /></Ancora>
+
+
 
                     </NavLinks>
 
+
+
                 </Content>
+
             </Container>
         </>
     );

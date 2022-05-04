@@ -9,6 +9,8 @@ export const Container = styled.div`
     border-bottom: 1px solid white;
     background-color: #121214;
     z-index: 999; //**Para sobrepor qualquer outro elemento
+
+    gap: 10px;
     
     //**Tentando fixar o Header
     position: -webkit-sticky; //** Necessário para funcionar no Safari
@@ -113,5 +115,58 @@ export const CloseSidebar = styled.div`
 
     @media (max-width: 560px){
         display: flex;
+    }
+`;
+
+//----------------------AREA PARA O BTN DE MUDAR O TEMA
+
+//Componente estilizado AreaSwitchTheme, area que irá conter o btn de mudar o tema
+export const AreaSwitchTheme = styled.div`
+    position: relative;
+    bottom: -3rem;
+    width: 7rem;
+`;
+
+//Componente estilizado InputCheckBox, botão que irá mudar o tema
+export const InputCheckBox = styled.input`
+    &#toggle{
+        display: none;
+    }
+
+    &#toggle:checked + .button::after{
+        content: url('/images/sun-regular.svg');
+        background-color: #e7b51d;
+        transform: translateX(2.5rem) rotate(360deg);
+    }
+`;
+
+//Componente estilizado ToggleBar, barra de rolagem do icone de mudar o tema
+export const ToggleBar = styled.label`
+    display: none;
+
+    &.button{
+        display: inline-block;
+        width: 4rem;
+        height: 1rem;
+        background: #fff;
+        border-radius: 30px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    &.button::after{
+        content: url('/images/moon-regular.svg');
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: #0053e3;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+        position: absolute;
+        top: -6px;
+        left: 0;
+        place-content: center;
+        line-height: 0;
+        transition: background-color 0.3s, transform 0.3s ease-in;
     }
 `;
