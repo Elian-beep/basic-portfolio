@@ -75,6 +75,10 @@ export const Ancora = styled.a`
     height: 100px;
     transition: 0.3s;
 
+    text-decoration: none;
+    outline: none;
+    color: #FFF;
+
     &.active{ //** Quando a pagina em questao for da ancora clicada
         border-bottom: 1px solid white;
         margin-bottom: 1em;

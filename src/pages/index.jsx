@@ -24,8 +24,6 @@ export default function Home() {
 
         <Logo>
           <Img src='/images/Avatar-Elian.svg' />
-          
-          
         </Logo>
 
       </Content>

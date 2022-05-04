@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Ancora, CloseSidebar, Container, Content, ContentTitle, Menu, NavLinks, SubTitle, Title } from "./style";
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaArrowCircleRight } from 'react-icons/fa';
 import Link from "next/link";               //O link permite a navegação entre as rotas
 import { useRouter } from "next/router";
 
@@ -12,7 +12,7 @@ export default function Header() {
 
     const showSideBar = () => setSidebar(!sidebar); //A função modifica o valor do sidebar para o inverso de seu valor antigo (2)
 
-    function activeLink(path){
+    function activeLink(path) {
         return asPath === `/${path}` ? 'active' : ''; //O caminho (href) que estiver on, estará com seu respectivo ancora difernte (ativado)
     }
 
@@ -46,9 +46,11 @@ export default function Header() {
                             <Ancora className={activeLink('projects')} onClick={showSideBar} >Projetos</Ancora>
                         </Link>
 
-                        <Link href="repos">
+                        {/* <Link href="repos">
                             <Ancora className={activeLink('repos')} onClick={showSideBar} >Repositórios</Ancora>
-                        </Link>
+                        </Link> */}
+
+                            <Ancora href="https://prot-web-curriculo.vercel.app/" target='_blank' >Web Currículo <FaArrowCircleRight /></Ancora>
 
                     </NavLinks>
 
